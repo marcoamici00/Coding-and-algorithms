@@ -62,8 +62,10 @@ Two heuristics are used with A* search:
 ```
 CarbuRobot/
 │
-├── carburobot.ipynb      # Main notebook with implementation
-├── evaluation/           # Algorithm evaluation and results
+├── Carburobot.ipynb      # Main notebook with implementation
+├── Tabella_valutazione   # Algorithm evaluation and results
+├── Relazione_laboratorio # Develompment process
+├── Consegna_progetto     # Rules and details of the project
 └── README.md             # Project documentation
 ```
 
