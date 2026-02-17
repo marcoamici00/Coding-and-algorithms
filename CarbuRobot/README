@@ -1,1 +1,124 @@
+**Search Algorithms Project**
+
+CarbuRobot is a search and planning simulation project in which a robot operates in a fuel-constrained environment. The robot must move between rooms, manipulate objects, and compute an optimal sequence of actions to reach a predefined goal state.
+
+The project implements and compares multiple classical search algorithms, analyzing their performance in terms of execution time and explored nodes.
+
+---
+
+_Problem Description_
+
+The robot operates in a sequence of rooms and can perform the following actions:
+
+* **move** → move between adjacent rooms
+* **get** → pick up an object
+* **put** → drop an object
+* **refill** → refill fuel at a fuel station
+
+_Constraints:_
+
+* The robot can carry **only one object at a time**
+* Each object has a weight that affects fuel consumption
+* Moving without an object costs **1 fuel unit**
+* Moving with an loaded object costs **weight + 1**
+* Picking up or dropping an object costs fuel equal to its weight
+* Refilling increases fuel by a fixed amount
+
+The objective is to reach a goal configuration including robot position, object placement, and valid fuel constraints.
+
+---
+
+**Implemented Algorithms**
+
+The project includes the implementation and comparison of:
+
+* **Iterative Deepening Search (IDS)**
+* **Breadth-First Search (BFS)**
+* **Uniform Cost Search**
+* **A* Search**
+
+Each algorithm is evaluated based on:
+
+* number of explored nodes
+* solution path
+* execution time
+
+---
+
+**Heuristics**
+
+Two heuristics are used with A* search:
+
+* **h1 – Misplaced Objects Heuristic**
+  Counts the number of objects not in their goal positions
+
+* **h2 – Misplaced Rooms Heuristic**
+  Counts rooms containing incorrect objects
+
+---
+
+**Project Structure**
+
+```
+CarbuRobot/
+│
+├── carburobot.ipynb      # Main notebook with implementation
+├── evaluation/           # Algorithm evaluation and results
+└── README.md             # Project documentation
+```
+
+---
+
+**Requirements**
+
+* Python 3.x
+* Jupyter Notebook
+
+Install Jupyter (if needed):
+
+```
+pip install notebook
+```
+
+---
+
+**How to Run**
+
+1. Clone the repository:
+
+```
+git clone <repository-url>
+cd CarbuRobot
+```
+
+2. Start Jupyter Notebook:
+
+```
+jupyter notebook
+```
+
+3. Open `carburobot.ipynb`
+4. Run all cells to execute simulations and evaluations
+
+---
+
+**Test Scenarios**
+
+The notebook includes three test problems with increasing complexity:
+
+* **Problem 1:** simple object relocation
+* **Problem 2:** multiple objects with required refueling
+* **Problem 3:** complex planning with multiple refills
+
+---
+
+**Results Summary**
+
+Experimental results show that heuristic search (A*) significantly reduces explored nodes and execution time compared to uninformed search algorithms. The second heuristic (h2) generally provides the best performance.
+
+---
+
+**Author**
+
+Marco Amici
 
